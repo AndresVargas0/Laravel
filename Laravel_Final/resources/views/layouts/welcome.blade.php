@@ -9,19 +9,19 @@
     </head>
     <header class="bg-green-600 flex justify-between text-lg">
         <div class="flex items-center justify-start">
-            <img class="ml-10 w-10 h-10" src="{{asset('Imgs/logo.png')}}" alt="">
+            <img class="ml-10 w-10 h-10 hover:rotate-180 transition-transform ease-in-out" src="{{asset('Imgs/logo.png')}}" alt="">
             <a class="pl-3 text-white" href="/">TOURS</a>
         </div>
         
         <ul class="p-4 justify-end">
-            <a class="rounded-sm hover:border-b-2 ml-4 mr-4 text-white" href="/"><i class="fa-solid fa-house"></i></a>
-            <a class="rounded-sm hover:border-b-2 ml-4 mr-4 text-white" href="/content"><i class="fa-solid fa-route"></i></a>
-            <a class="rounded-sm hover:border-b-2 ml-4 mr-4 text-white" href="/"><i class="fa-solid fa-headset"></i></a>
-            <a class="rounded-sm hover:border-b-2 ml-4 mr-4 text-white" href="{{route('count')}}"><i class="fa-solid fa-user"></i></a>
-            <a class="rounded-sm hover:border-b-2 ml-4 mr-4 text-white" href="/"><i class="fa-solid fa-door-open"></i></a>
+            <a class="ml-4 mr-4 text-white" href="/"><i class="fa-solid fa-house text-xl hover:scale-105 hover:border-b-2"></i></a>
+            <a class="ml-4 mr-4 text-white" href="/content"><i class="fa-solid fa-route text-xl hover:scale-105 hover:border-b-2"></i></a>
+            <a class="ml-4 mr-4 text-white" href="/"><i class="fa-solid fa-headset text-xl hover:scale-105 hover:border-b-2"></i></a>
+            <a class="ml-4 mr-4 text-white" href="{{route('count')}}"><i class="fa-solid fa-user text-xl hover:scale-105 hover:border-b-2"></i></a>
+            <a class="ml-4 mr-4 text-white" href="/"><i class="fa-solid fa-door-open text-xl hover:scale-105 hover:border-b-2"></i></a>
         </ul>
     </header>
-    <body class="body">
+    <bo
         @yield('count')
         @yield('content')
     </body>

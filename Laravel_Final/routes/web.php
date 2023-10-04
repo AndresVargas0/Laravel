@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegistroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,16 +14,17 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::post('/crearcuenta',[RegistroControllerController::class,'store'])->name('count');
+
+
 
 Route::get('/', function () {
     return view('destinos');
-});
+})->name('home');
 
 Route::get('/crearcuenta', function () {
     return view('crearcuenta');
 })->name('count');
-
-Route::post('/crearcuenta',[LoginController::class,'store'])->name('count');
 
 Route::get('/iniciosesion', function () {
     return view('registrar');

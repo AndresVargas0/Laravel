@@ -11,19 +11,12 @@ class LoginController extends Controller
     //
     public function store(Request $request){
         $this->validate($request, [
-            'username'=>'required',
-            'email'=>'required|email|unique:users',
-            'password'=>'required|confirmed'
+            'email'=>'required',
+            'password'=>'required'
         ]);
-        User::create([
-            'username' => $request->username,
-            'email'=> $request->email,
-            'password'=>Hash::make($request->password)
-        ]);
-        auth()->attempt([
-            'email'=> $request->email,
-            'password'=>$request->password
-        ]);
-        return redirect()->route('count');
+        if(!auth()->attempt($request->only('email','password'), $request->remember)){
+            return back()->with('mensaje','Credenciales Incorrectas');
+        }
+        return redirect()->route('home');
     }
 }
