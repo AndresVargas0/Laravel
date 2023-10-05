@@ -1,6 +1,6 @@
 @extends('layouts.welcome')
-@section('titlecreate')
-Cuenta
+@section('title')
+- Cuenta
 @endsection
 @section('count')
 <body>

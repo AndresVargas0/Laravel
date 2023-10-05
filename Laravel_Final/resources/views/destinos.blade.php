@@ -1,4 +1,7 @@
 @extends('layouts.welcome')
+@section('title')
+ - Turismo, Ofertas y Mas
+@endsection
 @section('content')
 @vite('resources/css/cards.css')
 @vite('resources/js/loading.js')
@@ -81,16 +84,29 @@
         </div>
     </div>
 </body>
-<footer class="bg-green-600 h-52 flex items-center justify-center">
-    <h1 class="text-xl flex items-center font-extrabold text-white border-r-2 px-10 h-32">HUANUCO TOURS</h1>
-    <div class="pt-3 text-center text-white border-r-2 px-10 h-32">
-        <h2>Redes</h2>
-        <a href="">Facebook <br></a>
-        <a href="">Whatsapp <br></a>
-        <a href="">Instagram</a>
+<footer class="footer">
+    <div>
+        <h1 class="foot-company text-xl font-extrabold ">HUANUCO TOURS</h1>
+        <div class="link-company">
+            <a href="https://www.ytuqueplanes.com/imagenes/images/files/feriados_2023_peru.pdf" class="hover:underline cursor-pointer hover:text-green-600" target="_blank">Lista de Feriados 2023</a>
+            <a href="https://www.gob.pe/senamhi" class="hover:underline cursor-pointer hover:text-green-600" target="_blank">Clima y Pronóstico del Tiempo/a>
+            <a href="https://www.gob.pe/sernanp" class="hover:underline cursor-pointer hover:text-green-600" target="_blank">Áreas Naturales Protegidas</a>
+            <a href="https://play.google.com/store/apps/details?id=pe.dolphin.pc_programador_new.touristpolice_new&hl=es&pli=1" class="hover:underline cursor-pointer hover:text-green-600" target="_blank">Tourist Police Perú</a>
+        </div>  
+    </div>
+    <div class="foot-redes">
+        <h2>Siguenos:</h2>
+        <div class="links-redes text-2xl">
+            <a href="" target="_blank"><i class="fa-brands fa-facebook p-2 hover:text-green-700"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-whatsapp p-2 hover:text-green-700"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-twitter p-2 hover:text-green-700"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-instagram p-2 hover:text-green-700"></i></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube p-2 hover:text-green-700"></i></a>
+        </div>
     </div>
     <div>
-        <img class=" img-foot px-10 h-16 " src="{{asset('Imgs/perusalen.png')}}" alt="">
+        <img class="img-foot h-16 pb-4" src="{{asset('Imgs/perusalen.png')}}" alt="">
+        <img class="h-8" src="{{asset('Imgs/gob-perusalen.png')}}" alt="">
     </div>
 </footer>
 @endsection 
