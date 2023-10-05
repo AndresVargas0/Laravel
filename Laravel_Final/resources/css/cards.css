@@ -1,0 +1,81 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+.img-pr{
+    margin: auto;
+    margin-top: 20px;
+    height: 400px;
+    width: 100%;
+    filter: brightness(.5);
+    background-image: url(/public/Imgs/wallpaper.jpeg);
+    background-size: cover;
+}
+.pr-bg-content{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    color: white;
+    flex-direction: column;
+    font-weight: bold;
+}
+.pr-bg-button{
+    margin-top: 25px;
+    background: #2e9633;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+#ofertas{
+    color: gray;
+    padding: 20px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+/*Cards*/
+.caja-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto auto 40px auto;
+}
+.card{
+    box-shadow: 0px 5px 30px rgba(68, 68, 68, 0.279);
+    width: 256px;
+    height: 384px;
+    border-radius: 5px;
+}
+.img-card{
+    border-radius: 5px;
+    width: 100%;
+    height: 240px;
+}
+.card-content{
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
+.button-card{
+    background: #2e9633;
+    padding: 4px 8px;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 20px;
+    width: 100px;
+}
+.card-precio{
+    display: flex;
+    justify-content: end;
+    margin-top: -10px;
+    margin-right: 10px;
+}
+
+.img-foot{
+    filter: brightness(50);
+}
