@@ -1,11 +1,15 @@
-@extends('layouts.welcome')
+@extends('layouts.NavHome')
 @section('title')
 - Cuenta
 @endsection
-@section('count')
+@section('Forms')
+@vite('resources/js/datosUser.js')
+<head>
+    <link type="image/x-icon" sizes="16x16" rel="icon" href="/Imgs/favicon.png">
+</head>
 <body>
     <div class="flex justify-center bg-green-500 h-screen mt-14">
-        <form action="{{route('count')}}" method="POST" novalidate>
+        <form action="{{route('registercount')}}" method="POST" novalidate>
             @csrf
             <div class="shadow-xl text-center mr-8 mt-14 w-96 p-8 border-2 rounded-xl">
                 <h1 class="font-semibold">¿Eres Nuevo?</h1>

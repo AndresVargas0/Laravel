@@ -8,3 +8,9 @@
     z-index: 20;
     color: white;
 }
+.img-nav{
+    padding-left: 40px;
+}
+.img-nav:hover{
+    rotate: 360deg;
+}

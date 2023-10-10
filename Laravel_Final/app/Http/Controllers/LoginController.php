@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    //
     public function store(Request $request){
         $this->validate($request, [
             'email' => 'required',
@@ -16,7 +15,7 @@ class LoginController extends Controller
             return back()->with('mensaje', 'Credenciales Incorrectas');
         }
         elseif (auth()->user()->email === 'Admin@gmail.com') {
-            return redirect()->route('admin');
+            return redirect()->route('datos');
         }
         return redirect()->route('home');
     }

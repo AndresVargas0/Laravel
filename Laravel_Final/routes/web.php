@@ -2,37 +2,28 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\registerController;
+use App\Http\Controllers\DestinosController;
+use App\Http\Controllers\DatosController;
+use App\Http\Controllers\HomeViajesController;
 use Illuminate\Support\Facades\Route;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-Route::post('/crearcuenta',[registerController::class,'store'])->name('count');
-Route::post('/login',[LoginController::class,'store'])->name('logincount');
 
-Route::get('/', function () {
-    return view('destinos');
-})->name('home');
+Route::get('/register',[RegisterController::class,'index'])->name('registercount');
+Route::post('/register',[RegisterController::class,'store']);
 
-Route::get('panel_admin', function () {
-    return view('Admin');
-})->name('admin');
+Route::get('/login',[LoginController::class,'index'])->name('logincount');
+Route::post('/login',[LoginController::class,'store']);
 
+Route::get('/destinos',[DestinosController::class,'index'])->name('destino.create');
+Route::post('/destinos',[DestinosController::class,'store']);
 
-Route::get('/crearcuenta', function () {
-    return view('crearcuenta');
-})->name('count');
+Route::get('/datos',[DatosController::class, 'index'])->name('datos');
 
-Route::get('/content', function () {
-    return view('destinos');
-});
+Route::get('/datoshome',[HomeViajesController::class, 'index'])->name('datos.home');
 
-Route::get('admin', function () {
-    return view('Admin');
-})->name('admin');
+Route::get('/', function () {return view('Home');})->name('home');
+
+Route::get('/count', function() {return view('auth.Count');})->name('forms');
+
+// Route::get('/pack_viajes', function() {return view('PackViajes');})->name('pack.viajes');    
+
+// Route::get('/admin', function () {return view('Admin'); })->name('admin');
