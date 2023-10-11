@@ -9,8 +9,8 @@ class HomeViajesController extends Controller
     public function index()
     {
         $destinos = Destinos::all();
-
-        return view('home', compact('destinos'));
+        
+        return view('Home', compact('destinos'));
         // dd($destinos);
     }
 }

@@ -37,18 +37,36 @@
          @endforeach 
     </div>
     {{-- Boleta --}}
-    <div id="popup" class="popup">
-        <div class="popup-content flex">
-            <img id="popup-image" class="img-card">
-            <div class="mx-10 flex flex-col justify-center">
-                <h2 id="popup-title" class="font-bold my-1 text-lg"></h2>
-                <p id="popup-description" class="font-extralight text-sm my-1"></p>
-                <p id="popup-price" class="font-bold text-red-600 my-1 text-lg"></p>
-                <button class="font-semibold bg-green-600 text-white p-1 mt-2 rounded-lg px-3">Comprar</button>
-                <button id="close-popup" class="bg-slate-950 text-white mt-2 p-1 rounded-lg px-3">Cerrar</button>
-            </div>
-        </div>
-    </div>   
+    @foreach ($destinos as $datos)
+        <div id="popup" class="popup">
+            <form class="popup-content flex" action="{{route('pasajescreate')}}" method="POST">
+                @csrf
+                <img id="popup-image" class="img-card">
+                <div class="flex justify-evenly">
+                    <div class="flex flex-col w-32 mt-2">
+                        <p id="title" class="ml-2 text-center font-bold my-1 text-lg"></p>
+                        <input type="text" id="destino" name="destino" class="my-1 text-center font-semibold" value="{{$datos->title}}">
+                        <input type="text" name="ubication" class="my-1 text-center font-semibold" value="{{$datos->ubication}}" id="ubication">
+                        <input type="text" name="price" id="price" class="my-1 text-center text-red-500 font-bold" value="S/.{{$datos->price - $datos->discount}}">
+                        <div class="flex flex-col justify-center">
+                            <button type="submit" class="m-auto w-24 font-semibold bg-green-600 text-white p-1 mt-2 rounded-lg px-2">Comprar</button>
+                            <button id="close-popup" class="m-auto w-24 bg-slate-950 text-white mt-2 p-1 rounded-lg px-3">Cerrar</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white mt-2 ml-2">
+                        <label for="" class="font-semibold text-start py-1">Dni:</label>
+                        <input class="font-extralight" id="dni" name="dni" type="number" placeholder="Dni">
+                        <label for="" class="font-semibold py-1 text-start">Nombre:</label>
+                        <input class="font-extralight" id="name" name="name" type="text" placeholder="Nombre">
+                        <label for="" class="font-semibold py-1 text-start">Correo:</label>
+                        <input class="font-extralight" id="email" name="email" type="email" placeholder="Correo">
+                        <label for="" class="font-semibold py-1 text-start">Celular:</label>
+                        <input class="font-extralight" id="phone" name="phone" type="number" placeholder="Celular">
+                    </div>
+                </div>
+            </form>
+        </div>   
+    @endforeach
 </body>
 <footer class="footer">
     <div>

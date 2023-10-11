@@ -1,9 +1,9 @@
 const showPopup = (imageSrc, title, description, price) => {
     const popup = document.getElementById("popup");
     const popupImage = document.getElementById("popup-image");
-    const popupTitle = document.getElementById("popup-title");
-    const popupDescription = document.getElementById("popup-description");
-    const popupPrice = document.getElementById("popup-price");
+    const popupTitle = document.getElementById("title");
+    const popupDescription = document.getElementById("ubication");
+    const popupPrice = document.getElementById("price");
 
     setTimeout(() => {
         popupImage.src = imageSrc;

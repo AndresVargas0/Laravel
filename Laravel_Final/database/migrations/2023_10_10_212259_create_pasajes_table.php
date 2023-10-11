@@ -14,9 +14,10 @@ return new class extends Migration
             $table->string('dni')->unique();
             $table->string('name');
             $table->string('email')->unique();
-            $table->numeric('phone');
-            
-
+            $table->string('phone');
+            $table->string('destino');
+            $table->string('ubication');
+            $table->decimal('price', 10, 2);
             $table->timestamps();
         });
     }
