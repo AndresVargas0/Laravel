@@ -11,7 +11,7 @@
     <header class="nav text-lg">
         <div class="flex items-center justify-start">
             <img class="img-nav h-10" src="{{asset('Imgs/logo.png')}}" alt="">
-            <a class="pl-3 text-xl font-extrabold" href="">HUANUCO TOURS</a>
+            <a class="pl-3 text-xl font-extrabold" href="{{route('datos.home')}}">HUANUCO TOURS</a>
         </div>
         <div class="p-4 justify-end">
             <a class="ml-4 mr-4" href="{{route('datos.home')}}"><i class="fa-solid fa-house text-xl hover:scale-125 transition-transform ease-in-out"></i></a>

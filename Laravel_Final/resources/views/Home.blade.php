@@ -22,7 +22,7 @@
     <div class="caja-cards">
         @foreach ($destinos as $datos)
             <div class="card">
-                <img class="img-card hover:scale-105 transition-transform ease-in-out" src="{{asset("Imgs/Kotosh.JPG")}}" alt="">
+                <img class="img-card hover:scale-105 transition-transform ease-in-out" src="{{asset("Imgs/Huanuco.jpg")}}" alt="">
                 <div class="card-content">
                     <h1 class="card-title font-bold hover:underline">{{$datos->title}}</h1>
                     <p class="font-extralight text-sm">{{$datos->ubication}}</p>
@@ -45,15 +45,15 @@
                 <div class="flex justify-evenly">
                     <div class="flex flex-col w-32 mt-2">
                         <p id="title" class="ml-2 text-center font-bold my-1 text-lg"></p>
-                        <input type="text" id="destino" name="destino" class="my-1 text-center font-semibold" value="{{$datos->title}}">
+                        <input type="text" id=""destino name="destino" class="my-1 text-center font-semibold" value="{{$datos->title}}">
                         <input type="text" name="ubication" class="my-1 text-center font-semibold" value="{{$datos->ubication}}" id="ubication">
-                        <input type="text" name="price" id="price" class="my-1 text-center text-red-500 font-bold" value="S/.{{$datos->price - $datos->discount}}">
+                        <input type="text" name="price" id="price" class="my-1 text-center text-red-500 font-bold" value="{{$datos->price - $datos->discount}}">
                         <div class="flex flex-col justify-center">
                             <button type="submit" class="m-auto w-24 font-semibold bg-green-600 text-white p-1 mt-2 rounded-lg px-2">Comprar</button>
                             <button id="close-popup" class="m-auto w-24 bg-slate-950 text-white mt-2 p-1 rounded-lg px-3">Cerrar</button>
                         </div>
                     </div>
-                    <div class="flex flex-col bg-white mt-2 ml-2">
+                    <div class="flex flex-col bg-white mt-2 ml-4">
                         <label for="" class="font-semibold text-start py-1">Dni:</label>
                         <input class="font-extralight" id="dni" name="dni" type="number" placeholder="Dni">
                         <label for="" class="font-semibold py-1 text-start">Nombre:</label>
